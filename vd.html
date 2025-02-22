@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1st Anniversary</title>
+
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(120deg, rgb(1, 74, 98), rgb(1, 40, 86), rgb(195, 17, 198));
+      overflow: hidden;
+    }
+    .card{
+      background: linear-gradient(30deg, rgb(132, 3, 161), rgb(1, 40, 71));
+      border-radius: 50px;
+      box-shadow: 0px 10px 30px black;
+      text-align: center;
+      padding: 20px;
+      height: 350px;
+      max-width: 350px;
+      border: 2px solid rgb(0,7,128);
+      animation: fadeIn 1.5s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo-frame{
+      background-color: #69006c;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 15px;
+      border: 5px solid #69006c;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: bounce 2s infinite;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .wish-text{
+      font-size: 20px;
+      color: #0ea2e1;
+      font-weight: bold;
+      margin: 30px 0;
+      animation: glow 2s infinite alternate;
+    }
+    .sub-text{
+      font-size: 15px;
+      color: rgb(251, 174, 238);
+      margin: 20px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: center;
+      animation: glow 3s ease-out;
+    }
+    .floating-hearts{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .heart{
+      position: absolute;
+      width: 30px;
+      height: 40px;
+      background-color: #ff6f6f;
+      border-radius: 50%;
+      bottom: -60px; 
+      animation: float 5s ease-in-out infinite;  
+    }
+    .heart:nth-child(2){
+      left: 30%;
+      animation-delay:2s ;
+    }
+    .heart:nth-child(3){
+      left: 70%;
+      animation-delay: 4s;
+    }
+    /*Animation*/
+    @keyframes fadeIn{
+      from {opacity: 0; transform: (20px);}
+      to{
+        opacity: 1; transform: (0);
+      }
+    }
+    @keyframes bounce{
+      0%, 100%{ transform: translateY(0);}
+      50%{
+        transform: translateY(-10px);
+      }
+    }
+    @keyframes glow{
+      0%{text-shadow: 0 0 5px #61efff;}
+      100%{text-shadow: 0 0 20px #ff61fa;}
+    }
+    @keyframes slideIn{
+      from{transform: translateY(20px); opacity: 0;}
+      to{transform: translateY(0); opacity: 1;}
+    }
+    @keyframes float{
+      0%{transform: translateY(0);}
+      50%{transform: translateY(-200px);}
+      100%{transform: translateY(-400px);}
+    }
+  </style>
+</head>
+<body><center>
+  <div class="card">
+    <div class="photo-frame">
+      <img src="c:\shifaa iot\vd.jpg" alt="" id="photo">
+    </div>
+    <h2 class="wish-text">Happy 1st Anniversary My Loveee!</h2>
+    <p class="sub-text">"Cheers to another year of Love and Happiness.<br>
+    Thanks for Everything in my Life and I Love you Irsatheyy.</p>
+
+    <div class="floating-hearts">
+      <div class="heart" style="background-color: #ff9a9e;"></div>
+      <div class="heart" style="background-color: #ff9a9e;"></div>
+      <div class="heart" style="background-color: #ff9a9e;"></div>
+    </div>
+  </div>
+  <!--// script.js -->
+  <script>
+    document.querySelector("card").addEventListener("click", () =>{
+      const card = document.querySelector(".card");
+      card.style.animation = "none";
+      setTimeout(() =>{
+      }, s)
+    })
+  </script>
+  </center>
+</body>
+</html>
